@@ -9,10 +9,12 @@ end;
 
 
 var
-t,p:array [0..1001,0..1001] of qword;
+t,p,w:array [0..1001,0..1001] of qword;
 m,n,i,j:word;
+modv:qword;
 buff:char;
 begin
+modv:=1000000009;
 readln(n,m);
 for i:=1 to n do
 begin
@@ -38,11 +40,35 @@ end;
 
 
 
+
+
 for i:=1 to n do
 begin
 for j:=1 to m do
 begin
-write(p[i,j]);
+
+if(p[i-1,j]=p[i,j-1]) then w[i,j]:=2*p[i-1,j]
+else w[i,j]:=max(p[i-1,j],p[i,j-1]);
+
+
+end;
+end;
+
+
+
+
+
+
+
+
+
+
+
+for i:=1 to n do
+begin
+for j:=1 to m do
+begin
+write(w[i,j]);
 end;
 writeln();
 end;
