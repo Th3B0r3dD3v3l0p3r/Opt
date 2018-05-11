@@ -39,7 +39,8 @@ end;
 end;
 
 
-
+for i:=1 to n do w[i,0]:=1;
+for j:=1 to m do w[0,j]:=1;
 
 
 
