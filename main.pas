@@ -63,7 +63,7 @@ begin
         end;
     end;
 
-writeln(l[n,m]);
+writeln(l[n-1,m-1]);
   end.
 
 
