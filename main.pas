@@ -1,13 +1,15 @@
 var
-t:array [0..1001,0..1001] of char;
+t:array [0..1001,0..1001] of byte;
 m,n,i,j:word;
+buff:char;
 begin
 readln(n,m);
 for i:=1 to n do
 begin
 for j:=1 to m do
 begin
-read(t[j,i]);
+read(buff);
+t[i,j]:=ord(buff);
 end;
 end;
 
@@ -15,7 +17,7 @@ for i:=1 to n do
 begin
 for j:=1 to m do
 begin
-write(t[i,j]);
+write(char(t[i,j]));
 end;
 writeln();
 end;
