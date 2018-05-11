@@ -50,7 +50,7 @@ begin
 for j:=1 to m do
 begin
 
-if(p[i-1,j]=p[i,j-1]) then w[i,j]:=2*p[i-1,j]
+if(w[i-1,j]=w[i,j-1]) then w[i,j]:=2*p[i-1,j]
 else w[i,j]:=max(p[i-1,j],p[i,j-1]);
 
 
