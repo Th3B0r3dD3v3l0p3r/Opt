@@ -6,11 +6,14 @@ begin
 readln(n,m);
 for i:=1 to n do
 begin
-for j:=1 to m do
+for j:=1 to m+1 do
 begin
 read(buff);
+if j<=m then
+begin
 if buff='*' then t[i,j]:=1;
 write(t[i,j],' ',i,' ',j,'   ');
+end;
 end;
 end;
 
