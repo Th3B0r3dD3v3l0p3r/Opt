@@ -4,9 +4,9 @@ m,n,i,j:word;
 buff:char;
 begin
 readln(n,m);
-for i:=1 to n-1 do
+for i:=1 to n do
 begin
-for j:=1 to m-1 do
+for j:=1 to m do
 begin
 read(buff);
 if buff='*' then t[i,j]:=1;
