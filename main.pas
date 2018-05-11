@@ -9,8 +9,7 @@ begin
 for j:=1 to m do
 begin
 read(buff);
-t[i,j]:=ord(buff);
-write(char(t[i,j]));
+if buff='*' then t[i,j]:=1;
 end;
 end;
 
@@ -18,7 +17,7 @@ for i:=1 to n do
 begin
 for j:=1 to m do
 begin
-write(char(t[i,j]));
+write(t[i,j]);
 end;
 writeln();
 end;
