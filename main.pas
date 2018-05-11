@@ -7,7 +7,7 @@ for i:=1 to n do
 begin
 for j:=1 to m do
 begin
-read(t[i,j]);
+read(t[j,i]);
 end;
 end;
 
