@@ -44,7 +44,7 @@ end;
 
 
 
-
+w[0][0]:=1;
 for i:=1 to n do
 begin
 for j:=1 to m do
