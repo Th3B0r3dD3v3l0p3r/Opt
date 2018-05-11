@@ -1,3 +1,13 @@
+function max(a,b:Qword):qword;
+begin
+if a>b then max:=a
+else max:=b;
+
+
+end;
+
+
+
 var
 t,p:array [0..1001,0..1001] of qword;
 m,n,i,j:word;
