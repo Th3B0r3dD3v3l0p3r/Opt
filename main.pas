@@ -33,7 +33,7 @@ for i:=1 to n do
 begin
 for j:=1 to m do
 begin
-p[i][j]:=p[i][j]+max(p[i][j-1],p[i-1][j]);
+p[i][j]:=p[i][j]+max(p[i][j-1],p[i-1][j])+t[i][j];
 
 end;
 end;
