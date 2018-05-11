@@ -66,8 +66,9 @@ begin
 begin
 for j:=1 to m do
 begin
-    writeln(l[i][j]);
+    write(l[i][j],' ');
 end;
+writeln();
   end;
 
 
