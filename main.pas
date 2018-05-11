@@ -62,8 +62,16 @@ begin
             end;
         end;
     end;
-    
-    writeln(l[n][m]);
-  
+    for i:=1 to n do
+begin
+for j:=1 to m do
+begin
+    writeln(l[i][j]);
+end;
+  end;
+
+
+
+
 end.
  
