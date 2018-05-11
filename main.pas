@@ -2,16 +2,22 @@ var
 t:array [0..1001,0..1001] of char;
 m,n,i,j:word;
 begin
-readln(m,n);
+readln(n,m);
 for i:=1 to n do
 begin
-read(t[i,1]);
+for j:=1 to m do
+begin
+read(t[i,j]);
+end;
 end;
 
 for i:=1 to n do
 begin
-write(t[i,1]);
+for i:=1 to m do
+begin
+write(t[i,j]);
 end;
-
+writeln();
+end;
 
 end.
