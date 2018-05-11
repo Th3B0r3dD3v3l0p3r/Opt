@@ -33,19 +33,14 @@ for i:=1 to n do
 begin
 for j:=1 to m do
 begin
-p[i][j]:=max(p[i][j-1],p[i-1][j]);
+p[i][j]:=p[i][j]+max(p[i][j-1],p[i-1][j]);
+
 end;
 end;
 
 
 
-for i:=1 to n do
-begin
-for j:=1 to m do
-begin
-if t[i][j]=1 then p[i][j]:=p[i][j]+1;
-end;
-end;
+
 
 
 
@@ -76,7 +71,7 @@ for i:=1 to n do
 begin
 for j:=1 to m do
 begin
-write(w[i,j]);
+write(p[i,j]);
 end;
 writeln();
 end;
