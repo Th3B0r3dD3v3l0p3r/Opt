@@ -10,6 +10,7 @@ for j:=1 to m do
 begin
 read(buff);
 t[i,j]:=ord(buff);
+write(char(t[i,j]));
 end;
 end;
 
