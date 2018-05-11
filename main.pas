@@ -51,8 +51,8 @@ for j:=1 to m do
 begin
 
 if(p[i-1,j]=p[i,j-1]) then w[i,j]:=2*p[i-1,j]
-else if(p[i-1,j]>p[i,j-1]) then w[i,j]:=p[i-1,j]
-else w[i,j]:=p[i,j-1];
+else if(p[i-1,j]>p[i,j-1]) then w[i,j]:=w[i-1,j]
+else w[i,j]:=w[i,j-1];
 
 
 end;
@@ -72,7 +72,7 @@ for i:=1 to n do
 begin
 for j:=1 to m do
 begin
-write(p[i,j]);
+write(w[i,j]);
 end;
 writeln();
 end;
