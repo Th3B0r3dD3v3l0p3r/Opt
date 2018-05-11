@@ -68,13 +68,30 @@ end;
 
 
 
-for i:=1 to n do
+for i:=0 to n do
 begin
-for j:=1 to m do
+for j:=0 to m do
+begin
+write(p[i,j]);
+end;
+writeln();
+end;
+
+writeln('-----');
+for i:=0 to n do
+begin
+for j:=0 to m do
 begin
 write(w[i,j]);
 end;
 writeln();
 end;
+
+
+
+
+
+
+
 
 end.
