@@ -13,7 +13,7 @@ end;
 
 for i:=1 to n do
 begin
-for i:=1 to m do
+for j:=1 to m do
 begin
 write(t[i,j]);
 end;
