@@ -27,19 +27,19 @@ begin
     l[0][0]:=1;
     l[0][0]:=1;
   
-    for i:=1 to n do
+    for i:=1 to n-1 do
     begin
         p[i][0]:=p[i-1][0]+t[i][0];
         l[i][0]:=1;
     end;
-    for i:=1 to m do
+    for i:=1 to m-1 do
     begin
         p[0][i]:=p[0][i-1]+t[0][i];
         l[0][i]:=1;
     end;
-    for  i:=1 to n do
+    for  i:=1 to n-1 do
     begin
-        for j:=1 to m do
+        for j:=1 to m-1 do
         begin
             p[i][j]:=max(p[i-1][j], p[i][j-1])+t[i][j];
             if(p[i-1][j]=p[i][j-1]) then
@@ -62,17 +62,11 @@ begin
             end;
         end;
     end;
-    for i:=1 to n do
-begin
-for j:=1 to m do
-begin
-    write(l[i][j],' ');
-end;
-writeln();
-  end;
+
+writeln(l[n,m]);
+  end.
 
 
 
 
-end.
- 
+
