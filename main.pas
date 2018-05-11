@@ -10,6 +10,7 @@ for j:=1 to m do
 begin
 read(buff);
 if buff='*' then t[i,j]:=1;
+write(t[i,j],' ',i,' ',j);
 end;
 end;
 
