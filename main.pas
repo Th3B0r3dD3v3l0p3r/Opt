@@ -56,7 +56,7 @@ begin
                 begin
                     if(p[i-1][j]<p[i][j-1]) then
                     begin
-                        l[i][j]=l[i][j-1];
+                        l[i][j]:=l[i][j-1];
                     end;
                 end;
             end;
