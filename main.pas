@@ -10,7 +10,7 @@ end;
 
 for i:=1 to n do
 begin
-write(t[i,1);
+write(t[i,1]);
 end;
 
 
