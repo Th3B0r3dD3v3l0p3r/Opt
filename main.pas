@@ -47,7 +47,7 @@ end;
                 begin
                 t1[i][j]:=t1[i][j]+t1[i-1][j];
                 t2[i][j]:=t2[i-1][j];
-                end;
+                end
                 else begin
                 t1[i][j]:=t[i][j]+t1[i][j-1];
                 t2[i][j]:=t2[i][j-1];
