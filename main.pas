@@ -32,7 +32,7 @@ end;
 j:=j+1;
 end;
 
-a[i]:=f-s;
+a[i]:=s-f;
 
 
 end;
