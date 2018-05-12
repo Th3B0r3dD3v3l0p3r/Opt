@@ -4,8 +4,8 @@ buff:byte;
 n,m,k,i,j:word;
 begin
 readln(n,m);
-for i:=1 to n do for j:=1 to m do read(t[j]);
+for i:=1 to n do for j:=1 to m do read(t[i,j]);
 
-for i:=1 to n do for j:=1 to m do write(t[j]);
+for i:=1 to n do for j:=1 to m do write(t[i,j]);
 
 end.
