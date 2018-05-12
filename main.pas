@@ -15,7 +15,7 @@ pl:=0;
 l:=0;
 j:=1;
 
-while j<m do begin
+while j<=m do begin
 o:=1;
 if ((t[i,j]='1') and (f=0)) then
 begin
