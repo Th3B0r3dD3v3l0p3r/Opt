@@ -1,46 +1,51 @@
+
 var
-t:array [0..501,0..501] of char;
-a:array [0..501] of word;
-buff:byte;
-n,m,k,i,j,f,s,l,pl,o:word;
+n,m,a,i,j,modv:logword;
+t1,t2:array [0..1000,0..1000] of longword;
+s:ansistring;
 begin
-readln(n,m);
-for i:=1 to n do for j:=1 to m do while ((t[i,j]<>'1') and (t[i,j]<>'0')) do read(t[i,j]);
-
-for i:=1 to n do 
-begin
-f:=0;
-s:=0;
-pl:=0;
-l:=0;
-j:=1;
-
-while j<=m do begin
-o:=1;
-if ((t[i,j]='1') and (f=0)) then
-begin
-o:=0;
-f:=j;
-end;
-
-if (((t[i,j]='1') and (s=0)) and ((f<>0) and (o=1))) then
-begin
-o:=0;
-s:=j;
-j:=m;
-end;
-j:=j+1;
-end;
-
-a[i]:=s-f;
-
-
-end;
-
-
-for i:=1 to n do writeln(a[i]);
+modv:=1000000009;
+    readln(n,m);
+    for i:=0 to n-1 do
+        begin
+        readln(s);
+        for j:=0 to m-1 do begin
+            if (s[j+1]='*') then t1[i][j]:=1;
+             else t1[i][j]:=0;
+            end;
+        end;
+    end;
+    for i:=1 to n-1 do  begin
+    t1[i][0]:=t1[i][0]+t1[i-1][0]; 
+    t2[i][0]:=1;
+    end;
 
 
 
-
+    for i:=1 to m-1 do
+    begin
+    t1[0][i]:=t[0][i]+t1[0][i-1];
+    t2[0][i]:=1;
+    end;
+    for i:=1 to n-1  do
+        begin
+        for j:=1 to m-1 do
+            begin
+            if (t1[i-1][j]=t1[i][j-1]) then
+                begin
+                t1[i][j]:=t1[i][j]+t1[i-1][j];
+                t2[i][j]:=(t2[i-1][j]+t2[i][j-1]) mod modv;
+                end;
+                 else if (t1[i-1][j]>t1[i][j-1]) then
+                begin
+                t1[i][j]:=t1[i][j]+t1[i-1][j];
+                t2[i][j]:=t2[i-1][j];
+                end;
+                else begin
+                t1[i][j]:=t[i][j]+t1[i][j-1];
+                t2[i][j]:=t2[i][j-1];
+            end;
+        end;
+    end;
+    writeln(t2[n-1][m-1]);
 end.
