@@ -1,6 +1,6 @@
 var
 t:array [0..501,0..501] of char;
-a:array [0..501]
+a:array [0..501] of word;
 buff:byte;
 n,m,k,i,j,f,s,l,pl,o:word;
 begin
