@@ -2,7 +2,7 @@
 var
 n,m,a,i,j,modv:logword;
 t1,t2:array [0..1000,0..1000] of longword;
-s:ansistring;
+buff:char;
 begin
 modv:=1000000009;
     readln(n,m);
