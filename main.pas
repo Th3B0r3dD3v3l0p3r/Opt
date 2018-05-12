@@ -1,10 +1,10 @@
 var
-n,m,a,i,j,modv:longword;
-tab1,tab2:array [0..1000,0..1000] of longword;
+n,m,a,i,j,lmod:longword;
+tab1,tab2:array [0..1001,0..1001] of longword;
 buff:char;
 begin
 readln(n,m);
-modv:=1000000000+9;
+lmod:=1000000000+9;
 for i:=0 to n-1 do
 begin
 for j:=0 to m-1 do
@@ -30,7 +30,7 @@ begin
 if (tab1[i-1][j]=tab1[i][j-1]) then
 begin
 tab1[i][j]:=tab1[i][j]+tab1[i-1][j];
-tab2[i][j]:=(tab2[i-1][j]+tab2[i][j-1]) mod modv;
+tab2[i][j]:=(tab2[i-1][j]+tab2[i][j-1]) mod lmod;
 end
 else if (tab1[i-1][j]>tab1[i][j-1]) then
 begin
@@ -45,3 +45,5 @@ end;
 end;
 writeln(tab2[n-1][m-1]);
 end.
+
+//END HERE
