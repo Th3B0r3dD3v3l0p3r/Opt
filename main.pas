@@ -31,7 +31,7 @@ end;
 
     for i:=1 to m-1 do
     begin
-    t1[0][i]:=t[0][i]+t1[0][i-1];
+    t1[0][i]:=t1[0][i]+t1[0][i-1];
     t2[0][i]:=1;
     end;
     for i:=1 to n-1  do
@@ -42,7 +42,7 @@ end;
                 begin
                 t1[i][j]:=t1[i][j]+t1[i-1][j];
                 t2[i][j]:=(t2[i-1][j]+t2[i][j-1]) mod modv;
-                end;
+                end
                  else if (t1[i-1][j]>t1[i][j-1]) then
                 begin
                 t1[i][j]:=t1[i][j]+t1[i-1][j];
