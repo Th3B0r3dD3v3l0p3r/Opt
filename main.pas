@@ -8,6 +8,4 @@ for i:=1 to n do read(t[n]);
 
 
 
-
-
-end;
+end.
