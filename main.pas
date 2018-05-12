@@ -6,6 +6,6 @@ begin
 readln(n,m);
 for i:=1 to n do for j:=1 to m do read(t[j]);
 
-for i:=1 to n do for j:=1 to m do write(t[j];
+for i:=1 to n do for j:=1 to m do write(t[j]);
 
 end.
