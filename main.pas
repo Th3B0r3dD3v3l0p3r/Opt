@@ -12,7 +12,7 @@ begin
 for j:=0 to m-1 do
 begin
 buff:='a';
-while ((buff<>'*') and (buff<>'.'))read(buff);
+while ((buff<>'*') and (buff<>'.')) do read(buff);
 if buff='*' then t1[i,j]:=1;
 //write(t[i,j],' ',i,' ',j,'   ');
 end;
