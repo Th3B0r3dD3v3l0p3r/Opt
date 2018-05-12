@@ -1,5 +1,5 @@
 var
-t:array [0..501][0..501] of char;
+t:array [0..501,0..501] of char;
 buff:byte;
 n,m,k,i,j:word;
 begin
