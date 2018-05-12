@@ -1,6 +1,6 @@
 
 var
-n,m,a,i,j,modv:logword;
+n,m,a,i,j,modv:longword;
 t1,t2:array [0..1000,0..1000] of longword;
 buff:char;
 begin
