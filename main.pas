@@ -29,6 +29,7 @@ o:=0;
 s:=j;
 j:=m;
 end;
+j:=j+1;
 end;
 
 a[i]:=f-s;
