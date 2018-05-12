@@ -6,15 +6,22 @@ s:ansistring;
 begin
 modv:=1000000009;
     readln(n,m);
-    for i:=0 to n-1 do
-        begin
-        readln(s);
-        for j:=0 to m-1 do begin
-            if (s[j+1]='*') then t1[i][j]:=1;
-             else t1[i][j]:=0;
-            end;
-        end;
-    end;
+    
+for i:=0 to n-1 do
+begin
+for j:=0 to m-1 do
+begin
+buff:='a';
+while ((buff<>'*') and buff<>'.')read(buff);
+if buff='*' then t1[i,j]:=1;
+//write(t[i,j],' ',i,' ',j,'   ');
+end;
+end;
+
+
+
+
+
     for i:=1 to n-1 do  begin
     t1[i][0]:=t1[i][0]+t1[i-1][0]; 
     t2[i][0]:=1;
